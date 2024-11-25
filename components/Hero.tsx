@@ -44,7 +44,6 @@ const Hero = () => {
             </p>
           </Reveal>
           <Reveal>
-            {" "}
             <a href="#about">
               <MagicButton
                 title="Show more info"
