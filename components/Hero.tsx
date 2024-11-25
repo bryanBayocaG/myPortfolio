@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -45,7 +45,7 @@ const Hero = () => {
           <a href="#about">
             <MagicButton
               title="Show my work"
-              icon={<FaLocationArrow />}
+              icon={<FaChevronDown />}
               position="right"
             />
           </a>
