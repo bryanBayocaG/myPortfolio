@@ -17,6 +17,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
       slideControl.start("visible");
     }
   }, [isInView]);
+  const isHero = children.props?.["data-type"] === "hero";
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
@@ -33,24 +34,26 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
       >
         {children}
       </motion.div>
-      <motion.div
-        variants={{
-          hidden: { left: 0 },
-          visible: { left: "100%" },
-        }}
-        initial="hidden"
-        animate={slideControl}
-        transition={{ duration: 0.5, ease: "easeIn" }}
-        style={{
-          position: "absolute",
-          top: 4,
-          bottom: 4,
-          left: 0,
-          right: 0,
-          background: "blue",
-          zIndex: 20,
-        }}
-      />
+      {!isHero && (
+        <motion.div
+          variants={{
+            hidden: { left: 0 },
+            visible: { left: "100%" },
+          }}
+          initial="hidden"
+          animate={slideControl}
+          transition={{ duration: 0.5, ease: "easeIn" }}
+          style={{
+            position: "absolute",
+            top: 4,
+            bottom: 4,
+            left: 0,
+            right: 0,
+            background: "blue",
+            zIndex: 20,
+          }}
+        />
+      )}
     </div>
   );
 };

@@ -32,19 +32,25 @@ const Hero = () => {
       <div className="flex  relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
           <Reveal>
-            <h1 className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold">
+            <h1
+              data-type="hero"
+              className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold"
+            >
               Hi there! I&apos;m <span className="text-blue-700">Bryan.</span>
             </h1>
           </Reveal>
           <Reveal>
-            <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            <p
+              data-type="hero"
+              className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl"
+            >
               I&apos;m a{" "}
               <span className="text-blue-700 font-bold">web developer</span>,
               residing in Bacoor.
             </p>
           </Reveal>
           <Reveal>
-            <a href="#about">
+            <a data-type="hero" href="#about">
               <MagicButton
                 title="Show more info"
                 icon={<FaChevronDown />}
