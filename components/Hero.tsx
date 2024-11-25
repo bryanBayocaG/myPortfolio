@@ -36,14 +36,16 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           /> */}
           <Reveal>
-            <h1 className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold">
-              Hi there! I&apos;m <span className="text-blue-700">Bryan.</span>
-            </h1>
-            <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-              I&apos;m a{" "}
-              <span className="text-blue-700 font-bold">web developer</span>,
-              residing in Bacoor.
-            </p>
+            <>
+              <h1 className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold">
+                Hi there! I&apos;m <span className="text-blue-700">Bryan.</span>
+              </h1>
+              <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+                I&apos;m a{" "}
+                <span className="text-blue-700 font-bold">web developer</span>,
+                residing in Bacoor.
+              </p>
+            </>
           </Reveal>
 
           <a href="#about">
