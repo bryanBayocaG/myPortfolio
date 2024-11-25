@@ -31,14 +31,18 @@ const Hero = () => {
 
       <div className="flex relative my-20 z-10 md:justify-start sm:justify-evenly ">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
-          <Reveal>
+          {/* <Reveal>
             <h1
               data-type="hero"
               className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold"
             >
               Hi there! I&apos;m <span className="text-blue-700">Bryan.</span>
             </h1>
-          </Reveal>
+          </Reveal> */}
+          <TextGenerateEffect
+            words=" Hi there! I'm Bryan."
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+          />
           <Reveal>
             <p
               data-type="hero"

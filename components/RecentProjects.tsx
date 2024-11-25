@@ -8,7 +8,7 @@ import { Reveal } from "./ui/Reveal";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <section id="projects" className="py-20">
       <Reveal>
         <div>
           <h1 className="heading text-6xl font-extrabold text-center">
@@ -82,7 +82,7 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
