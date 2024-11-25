@@ -16,7 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className="scroll-smooth focus:scroll-auto"
+    >
       <head>
         <link rel="icon" href="/jsm-logo.png" sizes="any" />
       </head>
