@@ -29,7 +29,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex  relative my-20 z-10">
+      <div className="flex relative my-20 z-10 md:justify-start sm:justify-evenly ">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
           <Reveal>
             <h1
