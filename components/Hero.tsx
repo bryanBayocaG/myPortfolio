@@ -4,10 +4,11 @@ import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Spotlight } from "./ui/SpotLight";
 import { Reveal } from "./ui/Reveal";
+import ImageKo from "./ui/ImageKo";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-36 ">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -31,14 +32,6 @@ const Hero = () => {
 
       <div className="flex relative my-20 z-10 md:justify-start sm:justify-evenly ">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
-          {/* <Reveal>
-            <h1
-              data-type="hero"
-              className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold"
-            >
-              Hi there! I&apos;m <span className="text-blue-700">Bryan.</span>
-            </h1>
-          </Reveal> */}
           <TextGenerateEffect
             words=" Hi there! I'm Bryan."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
@@ -63,6 +56,14 @@ const Hero = () => {
             </a>
           </Reveal>
         </div>
+        <ImageKo />
+        {/* <div className="flex-1 h-0 w-0 border-t-[25px] border-l-[55px] border-b-[25px] border-solid border-t-transparent border-b-transparent border-l-[#555] justify-items-end">
+          <img
+            className="absolute bottom-0 right-0 w-96"
+            src="/me.png"
+            alt=""
+          />
+        </div> */}
       </div>
     </div>
   );
