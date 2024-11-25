@@ -7,7 +7,7 @@ interface Props {
 
 export const Reveal = ({ children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
   const mainControl = useAnimation();
   const slideControl = useAnimation();
 
@@ -15,6 +15,9 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
     if (isInView) {
       mainControl.start("visible");
       slideControl.start("visible");
+    } else {
+      mainControl.start("hidden");
+      slideControl.start("hidden");
     }
   }, [isInView]);
   const isHero = children.props?.["data-type"] === "hero";
