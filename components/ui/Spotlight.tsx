@@ -31,7 +31,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       <defs>
         <filter
           id="filter"
-          x="0.860352"
+          x="0.86035"
           y="0.838989"
           width="3785.16"
           height="2840.26"
