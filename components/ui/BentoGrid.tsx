@@ -9,11 +9,9 @@ import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-<<<<<<< HEAD
+
 import animationData from "@/data/confetti.json";
-=======
-// import animationData from "@/data/confetti.json";
->>>>>>> 115e3d3ca8c99d1d1428d4b6c5f24734db9c42af
+
 import MagicButton from "./MagicButton";
 
 export const BentoGrid = ({
@@ -71,7 +69,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "bryanbayoca686@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
