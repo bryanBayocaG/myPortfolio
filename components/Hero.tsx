@@ -28,24 +28,23 @@ const Hero = () => {
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
-      <Reveal>
-        <div className="flex justify-center relative my-20 z-10">
-          <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-            {/* <TextGenerateEffect
-            words="Hi thre! I'm Bryan."
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          /> */}
 
+      <div className="flex  relative my-20 z-10">
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
+          <Reveal>
             <h1 className="text-center text-[40px] md:text-5xl lg:text-6xl font-extrabold">
               Hi there! I&apos;m <span className="text-blue-700">Bryan.</span>
             </h1>
-
+          </Reveal>
+          <Reveal>
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
               I&apos;m a{" "}
               <span className="text-blue-700 font-bold">web developer</span>,
               residing in Bacoor.
             </p>
-
+          </Reveal>
+          <Reveal>
+            {" "}
             <a href="#about">
               <MagicButton
                 title="Show more info"
@@ -53,9 +52,9 @@ const Hero = () => {
                 position="right"
               />
             </a>
-          </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
     </div>
   );
 };
