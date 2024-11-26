@@ -5,6 +5,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import { Reveal } from "./ui/Reveal";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -33,10 +34,25 @@ const RecentProjects = () => {
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  {/* <img src="/bg.png" alt="bgimg" /> */}
+                  <Image
+                    src="/bg.png"
+                    width={0}
+                    height={0}
+                    layout="fill"
+                    alt="bgimg"
+                  />
                 </div>
-                <img
+                {/* <img
                   src={item.img}
+                  alt="cover"
+                  className="z-10 absolute bottom-0"
+                /> */}
+                <Image
+                  src={item.img}
+                  width={0}
+                  height={0}
+                  layout="fill"
                   alt="cover"
                   className="z-10 absolute bottom-0"
                 />
