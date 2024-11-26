@@ -10,7 +10,7 @@ const AllComponent = () => {
     <div>
       <Grid />
       <RecentProjects />
-      <Clients />
+      {/* <Clients /> */}
       <Experience />
       <Approach />
       <Footer />
