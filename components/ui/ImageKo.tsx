@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Image from "next/image";
 
 function ImageKo() {
   const ref = useRef(null);
@@ -28,10 +29,18 @@ function ImageKo() {
       }}
       className="flex-1 w-[150px] bg-black-200 rounded-l-full justify-items-end hidden md:flex"
     >
-      <img
+      {/* <img
         className="absolute bottom-0 right-0 w-0 md:w-52 lg:w-96"
         src="/me.png"
         alt=""
+      /> */}
+      <Image
+        src="/me.png"
+        alt="ako"
+        width={0}
+        height={0}
+        unoptimized
+        className="absolute bottom-0 right-0 w-0 md:w-52 lg:w-96"
       />
     </motion.div>
   );
