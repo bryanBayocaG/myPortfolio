@@ -1,12 +1,10 @@
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { IoIosPaper } from "react-icons/io";
-
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Spotlight } from "./ui/SpotLight";
 import { Reveal } from "./ui/Reveal";
 import ImageKo from "./ui/ImageKo";
+import React from "react";
+import ShowLinks from "./ShowLinks";
 
 const Hero = () => {
   return (
@@ -50,39 +48,7 @@ const Hero = () => {
           </Reveal>
           <Reveal>
             <div className="flex space-x-2">
-              <a
-                data-type="hero"
-                target="_blank"
-                href="./bayoca_bryan_resume.pdf"
-              >
-                <MagicButton
-                  title="My Resume"
-                  icon={<IoIosPaper className="w-5 h-5" />}
-                  position="right"
-                />
-              </a>
-              <a
-                data-type="hero"
-                target="_blank"
-                href="./bayoca_bryan_resume.pdf"
-              >
-                <MagicButton
-                  title="Linkdn"
-                  icon={<FaLinkedin className="w-5 h-5" />}
-                  position="right"
-                />
-              </a>
-              <a
-                data-type="hero"
-                target="_blank"
-                href="./bayoca_bryan_resume.pdf"
-              >
-                <MagicButton
-                  title="Github"
-                  icon={<FaGithub className="w-5 h-5" />}
-                  position="right"
-                />
-              </a>
+              <ShowLinks />
             </div>
           </Reveal>
         </div>
