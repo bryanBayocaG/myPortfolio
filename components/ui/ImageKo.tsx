@@ -26,13 +26,9 @@ function ImageKo() {
         duration: 1,
         delay: 0.75,
       }}
-      className="flex-1 w-[150px] bg-black-200 rounded-full justify-items-end hidden md:flex"
+      className="flex-1 w-[150px] bg-black-200 rounded-l-full justify-items-end hidden md:flex"
     >
-      <img
-        className="absolute bottom-0 right-0 w-96 overflow-hidden"
-        src="/me.png"
-        alt=""
-      />
+      <img className="absolute bottom-0 right-0 w-96 " src="/me.png" alt="" />
     </motion.div>
   );
 }
