@@ -4,7 +4,7 @@ import { Spotlight } from "./ui/SpotLight";
 import { Reveal } from "./ui/Reveal";
 import ImageKo from "./ui/ImageKo";
 import React from "react";
-import ShowLinks from "./ShowLinks";
+import { IoIosPaper } from "react-icons/io";
 
 const Hero = () => {
   return (
@@ -30,27 +30,52 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex relative my-20 z-10 md:justify-start sm:justify-evenly ">
+      <div className="flex relative my-20 z-10 justify-center">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
           <TextGenerateEffect
             words=" Hi there! I'm Bryan."
-            className="text-center md:tracking-wider text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-          <Reveal>
-            <p
-              data-type="hero"
-              className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl"
-            >
-              I&apos;m a{" "}
-              <span className="text-blue-700 font-bold">web developer</span>,
-              residing in Bacoor.
+
+          <div className="block md:hidden">
+            <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+              Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
             </p>
-          </Reveal>
-          <Reveal>
-            <div className="flex space-x-2">
-              <ShowLinks />
-            </div>
-          </Reveal>
+
+            <a target="_blank" href="./bayoca_bryan_resume.pdf">
+              <MagicButton
+                title="My Resume"
+                icon={<IoIosPaper className="w-5 h-5" />}
+                position="right"
+              />
+            </a>
+          </div>
+
+          <div className="hidden md:block">
+            <Reveal>
+              <p
+                data-type="hero"
+                className="text-center  mb-4 text-sm md:text-lg lg:text-2xl"
+              >
+                I&apos;m a{" "}
+                <span className="text-blue-700 font-bold">web developer</span>,
+                residing in Bacoor.
+              </p>
+            </Reveal>
+            <Reveal>
+              <a
+                data-type="hero"
+                target="_blank"
+                href="./bayoca_bryan_resume.pdf"
+              >
+                <MagicButton
+                  title="My Resume"
+                  icon={<IoIosPaper className="w-5 h-5" />}
+                  position="right"
+                />
+              </a>
+            </Reveal>
+          </div>
         </div>
         <ImageKo />
       </div>
