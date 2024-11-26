@@ -39,7 +39,9 @@ const Hero = () => {
 
           <div className="block md:hidden">
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-              Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+              I&apos;m a{" "}
+              <span className="text-blue-700 font-bold">web developer</span>,
+              residing in Bacoor.
             </p>
 
             <a target="_blank" href="./bayoca_bryan_resume.pdf">
