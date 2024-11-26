@@ -1,9 +1,13 @@
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { Reveal } from "./ui/Reveal";
-import BouncingHand from "./ui/BouncingHand";
+// import BouncingHand from "./ui/BouncingHand";
+import dynamic from "next/dynamic";
 
 const Grid = () => {
+  const BouncingHand = dynamic(() => import("./ui/BouncingHand"), {
+    ssr: false,
+  });
   return (
     <section id="about">
       <Reveal>
@@ -13,9 +17,9 @@ const Grid = () => {
               Things <span className="text-blue-700">About Me. </span>
             </h1>
           </div>
-          {/* <div className="text-white rotate-90 justify-items-end ">
+          <div className="text-white rotate-90 justify-items-end ">
             <BouncingHand />
-          </div> */}
+          </div>
         </div>
       </Reveal>
 
