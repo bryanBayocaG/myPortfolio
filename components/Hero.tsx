@@ -1,4 +1,5 @@
-import { FaChevronDown } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { IoIosPaper } from "react-icons/io";
 
 import MagicButton from "./ui/MagicButton";
@@ -35,7 +36,7 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
           <TextGenerateEffect
             words=" Hi there! I'm Bryan."
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center md:tracking-wider text-[40px] md:text-5xl lg:text-6xl"
           />
           <Reveal>
             <p
@@ -48,17 +49,41 @@ const Hero = () => {
             </p>
           </Reveal>
           <Reveal>
-            <a
-              data-type="hero"
-              target="_blank"
-              href="./bayoca_bryan_resume.pdf"
-            >
-              <MagicButton
-                title="My Resume"
-                icon={<IoIosPaper className="w-5 h-5" />}
-                position="right"
-              />
-            </a>
+            <div className="flex space-x-2">
+              <a
+                data-type="hero"
+                target="_blank"
+                href="./bayoca_bryan_resume.pdf"
+              >
+                <MagicButton
+                  title="My Resume"
+                  icon={<IoIosPaper className="w-5 h-5" />}
+                  position="right"
+                />
+              </a>
+              <a
+                data-type="hero"
+                target="_blank"
+                href="./bayoca_bryan_resume.pdf"
+              >
+                <MagicButton
+                  title="Linkdn"
+                  icon={<FaLinkedin className="w-5 h-5" />}
+                  position="right"
+                />
+              </a>
+              <a
+                data-type="hero"
+                target="_blank"
+                href="./bayoca_bryan_resume.pdf"
+              >
+                <MagicButton
+                  title="Github"
+                  icon={<FaGithub className="w-5 h-5" />}
+                  position="right"
+                />
+              </a>
+            </div>
           </Reveal>
         </div>
         <ImageKo />
