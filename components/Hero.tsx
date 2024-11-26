@@ -57,13 +57,6 @@ const Hero = () => {
           </Reveal>
         </div>
         <ImageKo />
-        {/* <div className="flex-1 h-0 w-0 border-t-[25px] border-l-[55px] border-b-[25px] border-solid border-t-transparent border-b-transparent border-l-[#555] justify-items-end">
-          <img
-            className="absolute bottom-0 right-0 w-96"
-            src="/me.png"
-            alt=""
-          />
-        </div> */}
       </div>
     </div>
   );

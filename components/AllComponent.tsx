@@ -1,4 +1,3 @@
-import React from "react";
 import Grid from "./Grid";
 import RecentProjects from "./RecentProjects";
 import Clients from "./Clients";
