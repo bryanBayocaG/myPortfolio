@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Player } from "@lordicon/react";
+import dynamic from "next/dynamic";
 
 const ICON = require("@/data/hover-swipe.json");
 

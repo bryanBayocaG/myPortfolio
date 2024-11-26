@@ -13,9 +13,9 @@ const Grid = () => {
               Things <span className="text-blue-700">About Me. </span>
             </h1>
           </div>
-          <div className="text-white rotate-90 justify-items-end ">
+          {/* <div className="text-white rotate-90 justify-items-end ">
             <BouncingHand />
-          </div>
+          </div> */}
         </div>
       </Reveal>
 
