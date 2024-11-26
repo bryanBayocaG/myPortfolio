@@ -1,4 +1,5 @@
 import { FaChevronDown } from "react-icons/fa6";
+import { IoIosPaper } from "react-icons/io";
 
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -8,7 +9,7 @@ import ImageKo from "./ui/ImageKo";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 ">
+    <div className="pb-20 pt-36">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -47,10 +48,14 @@ const Hero = () => {
             </p>
           </Reveal>
           <Reveal>
-            <a data-type="hero" href="#about">
+            <a
+              data-type="hero"
+              target="_blank"
+              href="./bayoca_bryan_resume.pdf"
+            >
               <MagicButton
-                title="Show more info"
-                icon={<FaChevronDown />}
+                title="My Resume"
+                icon={<IoIosPaper className="w-5 h-5" />}
                 position="right"
               />
             </a>
