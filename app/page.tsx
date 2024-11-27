@@ -1,12 +1,15 @@
 "use client";
 
 import { navItems } from "@/data";
-import React, { useState, Suspense, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Loading from "@/components/Loading";
+import dynamic from "next/dynamic";
 
-const AllComponent = React.lazy(() => import("@/components/AllComponent"));
+const AllComponent = dynamic(() => import("@/components/AllComponent"), {
+  loading: () => <Loading />,
+});
 
 const Home = () => {
   const [shown, setShown] = useState(false);
@@ -23,12 +26,8 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        {!shown && <Loading />}
-        {shown && (
-          <Suspense>
-            <AllComponent />
-          </Suspense>
-        )}
+        {/* {!shown && <Loading />} */}
+        {shown && <AllComponent />}
       </div>
     </main>
   );

@@ -11,9 +11,9 @@ const AllComponent = () => {
       <Grid />
       <RecentProjects />
       {/* <Clients /> */}
-      <Experience />
-      <Approach />
-      <Footer />
+      {/* <Experience /> */}
+      {/* <Approach /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

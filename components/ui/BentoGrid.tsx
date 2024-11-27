@@ -63,6 +63,8 @@ export const BentoGridItem = ({
 
   const [copied, setCopied] = useState(false);
 
+  const [isOptimized, setOptimized] = useState(false);
+
   const defaultOptions = {
     loop: copied,
     autoplay: copied,
@@ -107,6 +109,8 @@ export const BentoGridItem = ({
               alt={img}
               width={0}
               height={0}
+              unoptimized={isOptimized}
+              onLoad={(e) => setOptimized(true)}
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
@@ -128,6 +132,8 @@ export const BentoGridItem = ({
               alt={spareImg}
               width={100}
               height={0}
+              quality={80}
+              loading="lazy"
               className="object-cover object-center w-full h-full"
             />
           )}

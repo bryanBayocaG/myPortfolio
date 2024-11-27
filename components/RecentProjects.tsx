@@ -41,6 +41,7 @@ const RecentProjects = () => {
                     height={0}
                     layout="fill"
                     alt="bgimg"
+                    loading="lazy"
                   />
                 </div>
                 {/* <img

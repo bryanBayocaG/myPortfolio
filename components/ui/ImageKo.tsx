@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
 
@@ -6,6 +6,7 @@ function ImageKo() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const mainControl = useAnimation();
+  const [isOptimized, setOptimized] = useState(false);
 
   useEffect(() => {
     if (isInView) {
@@ -39,7 +40,8 @@ function ImageKo() {
         alt="ako"
         width={0}
         height={0}
-        unoptimized
+        unoptimized={isOptimized}
+        onLoad={(e) => setOptimized(true)}
         className="absolute bottom-0 right-0 w-0 md:w-52 lg:w-96"
       />
     </motion.div>
