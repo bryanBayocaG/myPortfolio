@@ -27,11 +27,7 @@ const PageTransition = ({ children }: Props) => {
   // };
   const numOfColumn = 5;
   return (
-    <motion.div
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      className="page stairs"
-    >
+    <motion.div initial={{ opacity: 1 }} animate={{ opacity: 0 }}>
       {/* <div className="transition-container h-screen w-screen fixed top-0 left-0 pointer-events-none flex">
         {[...Array(numOfColumn)].map((_, i) => {
           return (

@@ -1,12 +1,18 @@
+"use client";
+import { AnimatePresence } from "framer-motion";
 import React from "react";
+import { useSearchParams } from "next/navigation";
 
-function page() {
+function Page() {
+  const router = useSearchParams();
   return (
-    <div>
-      <h1>hello</h1>
-      <p>hshdkaksdhjfkljahsdljh ahsdkjfhajsdhl</p>
-    </div>
+    <AnimatePresence mode="wait">
+      <div>
+        <h1>hello</h1>
+        <p>hshdkaksdhjfkljahsdljh ahsdkjfhajsdhl</p>
+      </div>
+    </AnimatePresence>
   );
 }
 
-export default page;
+export default Page;

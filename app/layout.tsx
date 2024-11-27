@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
-        <link rel="icon" href="/BryanLogo.jpg" sizes="any" />
+        <link rel="icon" href="/BryanLogo.png" sizes="any" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
