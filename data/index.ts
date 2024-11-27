@@ -26,7 +26,7 @@ export const gridItems = [
     titleClassName: "justify-center",
     img: "",
     spareImg: "",
-    link: "",
+    link: "/my_tools",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const gridItems = [
     titleClassName: "justify-center",
     img: "",
     spareImg: "",
-    link: "",
+    link: "/my_tech_stack",
   },
   {
     id: 4,
