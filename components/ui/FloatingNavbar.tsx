@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { FaGithub } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
 import Image from "next/image";
+import PulseEffect from "./PulseEffect";
 
 export const FloatingNav = ({
   navItems,
@@ -25,26 +26,30 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
 
-  // set true for the initial state so that nav bar is visible in the hero section
+  // console.log("Scroll prog", scrollYProgress.get());
   const [visible, setVisible] = useState(true);
+
+  const [itsZero, setitsZero] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
-      if (scrollYProgress.get() < 0.05) {
+      if (scrollYProgress.get() < 0) {
         // also set true for the initial state
         setVisible(true);
       } else {
         if (direction < 0) {
           setVisible(true);
-        } else {
+        } /* else {
           setVisible(false);
-        }
+        } */
       }
-      if (scrollYProgress.get() === 0) {
-        setVisible(false);
+      if (scrollYProgress.get() === 0 || scrollYProgress.get() === 1) {
+        setitsZero(true);
+      } else {
+        setitsZero(false);
       }
     }
   });
@@ -53,6 +58,7 @@ export const FloatingNav = ({
     <AnimatePresence mode="wait">
       <motion.div
         initial={{
+          // backgroundColor: "transparent",
           opacity: 1,
           y: -100,
         }}
@@ -64,13 +70,13 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex rounded-full fixed z-[5000] top-5 inset-x-0 mx-10 px-10 py-5 space-x-4",
+          `flex rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-10 py-5 space-x-4  ${
+            itsZero
+              ? "bg-transparent"
+              : "bg-[rgba(17,25,40,0.75)] backdrop-blur-[16px]"
+          }`,
           className
         )}
-        style={{
-          backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.75)",
-        }}
       >
         <Link
           href="/"
@@ -78,14 +84,16 @@ export const FloatingNav = ({
             "w-3/12  relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
           )}
         >
-          <Image
-            width={0}
-            height={0}
-            unoptimized
-            className="object-cover object-center w-28"
-            src="/BryanLogo.png"
-            alt="Logo"
-          />
+          <PulseEffect>
+            <Image
+              width={0}
+              height={0}
+              unoptimized
+              className="object-cover object-center w-28"
+              src="/BryanLogo.png"
+              alt="Logo"
+            />
+          </PulseEffect>
         </Link>
         <div className="invisible-space w-7/12 "></div>
         <Link
