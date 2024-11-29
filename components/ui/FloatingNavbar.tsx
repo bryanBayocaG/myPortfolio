@@ -87,7 +87,7 @@ export const FloatingNav = ({
         }}
         layout
         className={cn(
-          `flex rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-5 py-1 space-x-4  ${
+          `flex rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-5 py-2 md:py-5 space-x-4  ${
             itsZero ? "bg-transparent" : " backdrop-blur-[16px] shadow-2xl"
           }`,
           // className={cn(

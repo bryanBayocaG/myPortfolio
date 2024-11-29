@@ -13,7 +13,7 @@ const RecentProjects = () => {
       <Reveal>
         <div>
           <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
-            Selection of <span className="text-blue-700">My Projects.</span>
+            List of <span className="text-blue-700">My Projects.</span>
           </h1>
         </div>
       </Reveal>
