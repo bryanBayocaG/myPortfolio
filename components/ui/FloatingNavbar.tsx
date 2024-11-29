@@ -108,8 +108,10 @@ export const FloatingNav = ({
           </PulseEffect>
         </Link>
         <div className="invisible-space w-6/12"></div>
-        <Link
-          href="#"
+        <a
+          href="https://github.com/bryanBayocaG"
+          rel="noopener noreferrer"
+          target="_blank"
           className={cn(
             "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
           )}
@@ -118,9 +120,11 @@ export const FloatingNav = ({
           <span className="hidden md:block text-sm !cursor-pointer">
             Github
           </span>
-        </Link>
-        <Link
-          href="#"
+        </a>
+        <a
+          href="https://www.linkedin.com/in/bryan-bayoca"
+          rel="noopener noreferrer"
+          target="_blank"
           className={cn(
             "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
           )}
@@ -129,7 +133,7 @@ export const FloatingNav = ({
           <span className="hidden md:block text-sm !cursor-pointer">
             Linkedin
           </span>
-        </Link>
+        </a>
       </motion.div>
     </AnimatePresence>
   );
