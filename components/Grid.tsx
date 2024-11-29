@@ -10,18 +10,16 @@ const Grid = () => {
   });
   return (
     <section id="about">
-      <Reveal>
-        <div className="flex w-full">
-          <div>
-            <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
-              Things <span className="text-blue-700">About Me. </span>
-            </h1>
-          </div>
-          <div className="text-white rotate-90 justify-items-end ">
-            <BouncingHand />
-          </div>
+      <div className="relative flex w-full">
+        <div>
+          <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
+            Things <span className="text-blue-700">About Me. </span>
+          </h1>
         </div>
-      </Reveal>
+        <div className="text-white rotate-90 justify-items-end ">
+          <BouncingHand />
+        </div>
+      </div>
 
       <BentoGrid className="w-full py-20">
         {gridItems.map((item, i) => (
