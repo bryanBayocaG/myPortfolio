@@ -30,11 +30,6 @@ function ImageKo() {
       }}
       className="flex-1 bg-black-200 rounded-l-full justify-items-end hidden md:flex"
     >
-      {/* <img
-        className="absolute bottom-0 right-0 w-0 md:w-52 lg:w-96"
-        src="/me.png"
-        alt=""
-      /> */}
       <Image
         src="/me.png"
         alt="ako"

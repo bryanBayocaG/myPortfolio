@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
@@ -25,11 +25,21 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
-  // console.log("Scroll prog", scrollYProgress.get());
   const [visible, setVisible] = useState(true);
 
   const [itsZero, setitsZero] = useState(false);
+
+  const [isFirstMount, setIsFirstMount] = useState(true);
+
+  //just for checking first mount
+  // useEffect(() => {
+  //   if (isFirstMount) {
+  //     console.log("This is the first mount of the component");
+  //     setIsFirstMount(false);
+  //   } else {
+  //     console.log("not anymore");
+  //   }
+  // }, [isFirstMount]);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -44,6 +54,11 @@ export const FloatingNav = ({
           setVisible(true);
         } /* else {
           setVisible(false);
+          // if (isFirstMount) {
+          //   setVisible(true);
+          // } else {
+          //   setVisible(false);
+          // }
         } */
       }
       if (scrollYProgress.get() === 0 || scrollYProgress.get() === 1) {
