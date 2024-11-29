@@ -10,7 +10,7 @@ const AllComponent = () => {
       <Grid />
       <RecentProjects />
       {/* <Clients /> */}
-      {/* <Experience /> */}
+      <Experience />
       {/* <Footer /> */}
     </div>
   );

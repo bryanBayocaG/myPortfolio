@@ -1,15 +1,16 @@
 "use client";
-import { Reveal } from "@/components/ui/Reveal";
+import PageTransition from "@/components/ui/PageTransition";
+// import { Reveal } from "@/components/ui/Reveal";
 import React from "react";
 
 function Page() {
   return (
-    <Reveal>
+    <PageTransition>
       <>
         <h1>hello</h1>
         <p>hshdkaksdhjfkljahsdljh ahsdkjfhajsdhl</p>
       </>
-    </Reveal>
+    </PageTransition>
   );
 }
 
