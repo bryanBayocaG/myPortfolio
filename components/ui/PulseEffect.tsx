@@ -35,12 +35,11 @@ function PulseEffect({ children }: Props) {
     <AnimatePresence mode="wait">
       <motion.div
         variants={{
-          first: { scale: [1.3, 1], filter: ["blur(1.5rem)", "none"] },
-          second: { scale: 1, filter: "none" },
+          first: { scale: [1.3, 1], filter: ["blur(8px)", "blur(0px)"] },
+          second: { scale: 1, filter: "blur(0px)" },
         }}
         initial="second"
         animate={mainControl}
-        transition={{ type: "spring", duration: 0.5 }}
       >
         {children}
       </motion.div>
