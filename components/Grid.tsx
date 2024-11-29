@@ -13,7 +13,7 @@ const Grid = () => {
       <Reveal>
         <div className="flex w-full">
           <div>
-            <h1 className="heading text-6xl font-extrabold text-center">
+            <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
               Things <span className="text-blue-700">About Me. </span>
             </h1>
           </div>

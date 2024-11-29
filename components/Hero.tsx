@@ -34,9 +34,10 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col justify-end">
           <TextGenerateEffect
             words=" Hi there! I'm Bryan."
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[40px] md:text-4xl lg:text-6xl"
           />
 
+          {/* show when screen is less than medium  */}
           <div className="block md:hidden">
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
               I&apos;m a{" "}
@@ -53,14 +54,15 @@ const Hero = () => {
             </a>
           </div>
 
+          {/* show when screen is medium and up */}
           <div className="hidden md:block">
             <Reveal>
               <p
                 data-type="hero"
-                className="text-center  mb-4 text-sm md:text-lg lg:text-2xl"
+                className="text-center mb-4 text-sm md:text-base lg:text-2xl"
               >
                 I&apos;m a{" "}
-                <span className="text-blue-700 font-bold">web developer</span>,
+                <span className="text-blue-700 font-bold">webs developer</span>,
                 residing in Bacoor.
               </p>
             </Reveal>

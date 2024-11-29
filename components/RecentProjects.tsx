@@ -12,7 +12,7 @@ const RecentProjects = () => {
     <section id="projects" className="py-20">
       <Reveal>
         <div>
-          <h1 className="heading text-6xl font-extrabold text-center">
+          <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
             A small selection of{" "}
             <span className="text-blue-700">Recent Projects.</span>
           </h1>

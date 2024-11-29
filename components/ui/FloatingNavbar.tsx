@@ -72,7 +72,7 @@ export const FloatingNav = ({
         }}
         layout
         className={cn(
-          `flex  rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-10 py-5 space-x-4  ${
+          `flex rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-5 py-1 space-x-4  ${
             itsZero ? "bg-transparent" : " backdrop-blur-[16px] shadow-2xl"
           }`,
           // className={cn(
@@ -80,24 +80,19 @@ export const FloatingNav = ({
           className
         )}
       >
-        <Link
-          href="/"
-          className={cn(
-            "w-3/12  relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-          )}
-        >
+        <Link href="/" className={cn("w-6/12 items-center flex")}>
           <PulseEffect>
             <Image
-              width={0}
+              width={28}
               height={0}
               unoptimized
-              className="object-cover object-center w-28"
+              className=" w-28"
               src="/BryanLogo.png"
               alt="Logo"
             />
           </PulseEffect>
         </Link>
-        <div className="invisible-space w-7/12 "></div>
+        <div className="invisible-space w-6/12"></div>
         <Link
           href="#"
           className={cn(
@@ -105,7 +100,9 @@ export const FloatingNav = ({
           )}
         >
           <FaGithub className="w-7 h-7" />
-          <span className=" text-sm !cursor-pointer">Github</span>
+          <span className="hidden md:block text-sm !cursor-pointer">
+            Github
+          </span>
         </Link>
         <Link
           href="#"
@@ -114,7 +111,9 @@ export const FloatingNav = ({
           )}
         >
           <CiLinkedin className="w-7 h-7" />
-          <span className=" text-sm !cursor-pointer">Linkedin</span>
+          <span className="hidden md:block text-sm !cursor-pointer">
+            Linkedin
+          </span>
         </Link>
       </motion.div>
     </AnimatePresence>

@@ -10,7 +10,7 @@ const Experience = () => {
     <section className="py-20 w-full">
       <Reveal>
         <div>
-          <h1 className="heading text-6xl font-extrabold text-center">
+          <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
             My work <span className="text-blue-700">Experience.</span>
           </h1>
         </div>
