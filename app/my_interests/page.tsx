@@ -1,26 +1,21 @@
 "use client";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
-import PageTransition from "@/components/ui/PageTransition";
+import PageTransitionStairs from "@/components/ui/PageTransitionStairs";
 // import { Reveal } from "@/components/ui/Reveal";
 import React from "react";
+import Content from "./components/Content";
 
 function Page() {
   return (
-    <PageTransition>
-      <>
-        <FloatingNav navItems={navItems} />
-        <div className="">
-          <h1>interest</h1>
-          <p>hshdkaksdhjfkljahsdljh ahsdkjfhajsdhl</p>
+    <PageTransitionStairs>
+      <main className="relative bg-black-100 justify-center items-center flex-col  mx-auto sm:px-10 px-5 overflow-clip">
+        <div className="max-w-7xl w-full">
+          <FloatingNav navItems={navItems} />
+          <Content />
         </div>
-
-        <div className="">
-          <h1>interest</h1>
-          <p>hshdkaksdhjfkljahsdljh ahsdkjfhajsdhl</p>
-        </div>
-      </>
-    </PageTransition>
+      </main>
+    </PageTransitionStairs>
   );
 }
 

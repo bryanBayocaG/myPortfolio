@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -11,39 +11,37 @@ interface Props {
   children: JSX.Element;
 }
 
-const PageTransition = ({ children }: Props) => {
+const PageTransitionStairs = ({ children }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const mainControl = useAnimation();
   const slideControl = useAnimation();
 
+  const [oneSecond, setOneSecond] = useState(false);
+
   useEffect(() => {
     if (isInView) {
-      mainControl.start("visible");
       slideControl.start("visible");
     } else {
-      mainControl.start("hidden");
       slideControl.start("hidden");
     }
   }, [isInView]);
-  return (
-    <div ref={ref} className="relative h-screen ">
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControl}
-        transition={{
-          duration: 0.75,
-          delay: 0.5,
-        }}
-      >
-        {children}
-      </motion.div>
 
-      <div className="absolute flex top-0 left-0 w-full h-full">
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setOneSecond(true);
+    }, 1000);
+    return () => clearTimeout(timeOut);
+  });
+
+  return (
+    <div ref={ref} className="relative  ">
+      {children}
+
+      <div
+        className={`absolute flex top-0 left-0 w-full h-full ${oneSecond ? "-z-50" : "z-[6000]"
+          }`}
+      >
         {[...Array(5)].map((_, i) => {
           return (
             <motion.div
@@ -54,11 +52,9 @@ const PageTransition = ({ children }: Props) => {
               }}
               initial="hidden"
               animate={slideControl}
-              transition={{ duration: 1, ease: "easeIn" }}
-              className=" z-20 bg-red-700  w-10 flex-[1]"
-            >
-              hey
-            </motion.div>
+              transition={{ duration: 0.75, ease: "easeIn", delay: 0.10 * i }}
+              className=" z-20 bg-blue-700 w-10 flex-[1]"
+            />
           );
         })}
       </div>
@@ -66,4 +62,4 @@ const PageTransition = ({ children }: Props) => {
   );
 };
 
-export default PageTransition;
+export default PageTransitionStairs;
