@@ -70,7 +70,7 @@ const Hero = () => {
               <a
                 data-type="hero"
                 target="_blank"
-                href="./BAYOCA_RESUME.pdf"
+                href="./BAYOCA_BRYAN_RESUME.pdf"
               >
                 <MagicButton
                   title="My Resume"
