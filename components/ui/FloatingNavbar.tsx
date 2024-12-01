@@ -75,18 +75,18 @@ export const FloatingNav = ({
         initial={{
           opacity: 1,
           y: -100,
+
         }}
         animate={{
-          scale: [1.2, 1],
           y: visible ? 0 : -100,
           opacity: visible ? 1 : 0,
+
         }}
         transition={{
           duration: 0.5,
         }}
         className={cn(
-          `flex rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-5 py-2 md:py-5 space-x-4  ${
-            itsZero ? "bg-transparent" : " backdrop-blur-[16px] shadow-2xl"
+          `flex rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-5 py-2 md:py-5 space-x-4  ${itsZero ? "bg-transparent" : " backdrop-blur-[16px] shadow-2xl"
           }`,
           // className={cn(
           //   `flex  rounded-2xl fixed z-[5000] inset-x-0 mx-10 px-10 py-5 space-x-4`,
