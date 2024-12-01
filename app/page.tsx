@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Loading from "@/components/Loading";
 import dynamic from "next/dynamic";
+import AllPageWrapper from "@/components/AllPageWrapper";
 
 const AllComponent = dynamic(() => import("@/components/AllComponent"), {
   loading: () => <Loading />,
@@ -22,14 +23,16 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col  mx-auto sm:px-10 px-5 overflow-clip">
-      <div className="max-w-7xl w-full">
+    <AllPageWrapper>
+      <>
         <FloatingNav navItems={navItems} />
         <Hero />
         {/* {!shown && <Loading />} */}
         {shown && <AllComponent />}
-      </div>
-    </main>
+      </>
+    </AllPageWrapper>
+
+
   );
 };
 
