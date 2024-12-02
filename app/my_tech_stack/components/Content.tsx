@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { div } from "framer-motion/client";
+import Image from "next/image";
+import { StickyScroll } from "@/components/ui/StickyScrollReveal";
 
 
 interface Props {
@@ -23,22 +25,17 @@ const cardVariants: Variants = {
     }
 };
 
-// const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
-
 function Card({ emoji }: Props) {
-
     return (
         <motion.div
             className="card-container h-48 flex relative my-5 md:my-12 mx-5  bg-black border-slate-700 border rounded-xl"
-            // style={{ clipPath: 'inset(0px 0px 10px 0px)' }}
             initial="offscreen"
             whileInView="onscreen"
-        // viewport={{ once: true, amount: 0.8 }}
         >
             <div className="absolute -top-2 md:-top-10 md:-left-2 ">
                 <motion.div
                     className="flex w-40 h-48 md:w-[200px] md:h-[230px] text-9xl items-center justify-center rounded-xl bg-white"
-                    // style={{ transformOrigin: "3% 60%" }}
+
                     variants={cardVariants}
                 >
                     {emoji}
@@ -52,9 +49,68 @@ function Card({ emoji }: Props) {
     );
 }
 
+const content = [
+    {
+        title: "Collaborative Editing",
+        description:
+            "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Collaborative Editing
+            </div>
+        ),
+    },
+    {
+        title: "Real time changes",
+        description:
+            "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+        content: (
+            <div className="h-full w-full  flex items-center justify-center text-white">
+                <Image
+                    src="/linear.webp"
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
+    },
+    {
+        title: "Version control",
+        description:
+            "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+                Version control
+            </div>
+        ),
+    },
+    {
+        title: "Running out of content",
+        description:
+            "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+];
 
 
 const Content = () => {
+    const [screenWidth, setScreenWidth] = useState(0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const food = [
         "🍅",
         "🍊",
@@ -66,16 +122,26 @@ const Content = () => {
         "🍇"
     ];
 
-    return (
-        <div className="grid md:grid-cols-2">
-            {
-                food.map((emoji, i) => {
-                    return <Card key={i} emoji={emoji} />
-                })
-            }
+    if (screenWidth >= 1024) {
+        return (
+            <div className="p-10">
+                <StickyScroll content={content} />
+            </div>
+        )
 
-        </div>
-    )
+    } else {
+        return (
+            <div className="grid md:grid-cols-2">
+                {
+                    food.map((emoji, i) => {
+                        return <Card key={i} emoji={emoji} />
+                    })
+                }
+
+            </div>
+        )
+    }
+
 };
 
 export default Content;
