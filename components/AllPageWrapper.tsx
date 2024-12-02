@@ -6,8 +6,8 @@ interface Props {
 
 const AllPageWrapper = ({ children }: Props) => {
     return (
-        <main className="relative bg-black-100 justify-center items-center flex-col  mx-auto sm:px-10 px-5 overflow-clip">
-            <div className="max-w-7xl w-full">
+        <main className="relative bg-black-100 justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
+            <div className=" w-full">
                 {children}
             </div>
         </main>
