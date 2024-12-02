@@ -8,6 +8,7 @@ import Loading from "@/components/Loading";
 import dynamic from "next/dynamic";
 import AllPageWrapper from "@/components/AllPageWrapper";
 
+
 const AllComponent = dynamic(() => import("@/components/AllComponent"), {
   loading: () => <Loading />,
 });
@@ -23,6 +24,7 @@ const Home = () => {
   }, []);
 
   return (
+
     <AllPageWrapper>
       <>
         <FloatingNav navItems={navItems} />
@@ -31,6 +33,8 @@ const Home = () => {
         {shown && <AllComponent />}
       </>
     </AllPageWrapper>
+
+
 
 
   );

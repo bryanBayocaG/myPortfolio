@@ -100,17 +100,6 @@ const content = [
 
 
 const Content = () => {
-    const [screenWidth, setScreenWidth] = useState(0);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
     const food = [
         "🍅",
         "🍊",
@@ -122,16 +111,13 @@ const Content = () => {
         "🍇"
     ];
 
-    if (screenWidth >= 768) {
-        return (
-            <div className="p-10">
+    return (
+        <>
+            <div className="hidden md:block">
                 <StickyScroll content={content} />
             </div>
-        )
 
-    } else {
-        return (
-            <div className="grid md:grid-cols-2">
+            <div className="grid md:hidden">
                 {
                     food.map((emoji, i) => {
                         return <Card key={i} emoji={emoji} />
@@ -139,8 +125,8 @@ const Content = () => {
                 }
 
             </div>
-        )
-    }
+        </>
+    )
 
 };
 
