@@ -122,7 +122,7 @@ const Content = () => {
         "🍇"
     ];
 
-    if (screenWidth >= 1024) {
+    if (screenWidth >= 768) {
         return (
             <div className="p-10">
                 <StickyScroll content={content} />
