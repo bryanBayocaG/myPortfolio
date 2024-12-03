@@ -6,7 +6,7 @@ interface Props {
     id: number;
 }
 
-export function Content() {
+export function Content({ id }: Props) {
     const data = [
         {
             title: "2024",
