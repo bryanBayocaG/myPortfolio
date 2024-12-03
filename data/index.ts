@@ -15,6 +15,7 @@ export const gridItems = [
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "",
     spareImg: "",
+    link: "/my_tech_stack",
   },
   {
     id: 2,

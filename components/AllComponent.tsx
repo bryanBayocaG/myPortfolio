@@ -30,10 +30,8 @@ const AllComponent = () => {
   return (
     <div>
       <Grid />
-      {/* {scrollY > 300 && <RecentProjects />}
-      {scrollY > 1000 && <Experience />} */}
-      <RecentProjects />
-      <Experience />
+      {scrollY > 300 && <RecentProjects />}
+      {scrollY > 1000 && <Experience />}
       {/* <Clients /> */}
 
       {/* <Footer /> */}

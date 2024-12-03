@@ -47,7 +47,7 @@ const Hero = () => {
               <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
                 I&apos;m a{" "}
                 <span className="text-blue-700 font-bold">web developer</span>,
-                residing in Bacoor.
+                residing in <span className="text-blue-700 font-bold">Bacoor</span>.
               </p>
 
               <a target="_blank" href="./bayoca_bryan_resume.pdf">
@@ -68,7 +68,7 @@ const Hero = () => {
                 >
                   I&apos;m a{" "}
                   <span className="text-blue-700 font-bold">webs developer</span>,
-                  residing in Bacoor.
+                  residing in <span className="text-blue-700 font-bold">Bacoor</span>.
                 </p>
               </Reveal>
               <Reveal>

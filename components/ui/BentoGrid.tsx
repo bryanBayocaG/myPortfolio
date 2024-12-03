@@ -82,6 +82,7 @@ export const BentoGridItem = ({
       }}
     >
       {link ? (
+        /* ============== with link ==============*/
         <a
           href={link}
           className={`${id === 6 && "flex justify-center"} h-full`}
@@ -124,17 +125,60 @@ export const BentoGridItem = ({
           <div
             className={cn(
               titleClassName,
-              "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+              `group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 px-5 p-5 lg:p-10 ${id === 1 ? "flex" : "flex flex-col"}`
             )}
           >
-            <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
-              {description}
-            </div>
-            <div
-              className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
-            >
-              {title}
-            </div>
+
+            {id === 1 ? (
+              <div className="flex flex-[1] justify-center  flex-col">
+                <div className="font-sans font-extralight lg:text-base text-sm text-[#C1C2D3] z-10">
+                  {description}
+                </div>
+                <div
+                  className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+                >
+                  <div>
+                    {title}
+                  </div>
+                  <span className="font-extralight text-[15px] md:text-[20px] text-blue-700 hover:text-violet-600">show more</span>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+                  {description}
+                </div>
+                <div
+                  className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+                >
+                  <div>
+                    {title}
+                  </div>
+                  <span className="font-extralight text-[15px] md:text-[20px] text-blue-700 hover:text-violet-600">show more</span>
+                </div>
+              </>
+            )}
+            {id === 1 && (
+              <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 flex-[2] my-auto w-full h-fit items-center justify-items-center">
+                {
+                  [...Array(6)].map((id, _i) => (
+                    <div
+                      key={id}
+                      className="rounded-lg h-fit w-fit md:p-5 lg:p-3 p-2"
+                    >
+                      <Image
+                        src="/laravel-2.svg"
+                        width={0}
+                        height={0}
+                        alt="bgimg"
+                        loading="lazy"
+                        className="w-full h-full"
+                      />
+                    </div>
+                  ))
+                }
+              </div>
+            )}
             {id === 2 && (
               <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
                 <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
@@ -185,6 +229,7 @@ export const BentoGridItem = ({
           </div>
         </a>
       ) : (
+        /* ============== no link ==============*/
         <div className={`${id === 6 && "flex justify-center"} h-full`}>
           <div className="w-full h-full absolute">
             {img && (
