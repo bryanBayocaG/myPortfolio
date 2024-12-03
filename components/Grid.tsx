@@ -10,7 +10,7 @@ const Grid = () => {
   });
   return (
     <section id="about">
-      <div className="relative flex w-full">
+      {/* <div className="relative flex w-full">
         <div>
           <h1 className="heading text-3xl md:text-6xl font-extrabold text-center">
             Things <span className="text-blue-700">About Me. </span>
@@ -19,7 +19,7 @@ const Grid = () => {
         <div className="text-white rotate-90 justify-items-end ">
           <BouncingHand />
         </div>
-      </div>
+      </div> */}
 
       <BentoGrid className="w-full py-20">
         {gridItems.map((item, i) => (

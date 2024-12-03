@@ -23,20 +23,37 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
   const isHero = children.props?.["data-type"] === "hero";
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControl}
-        transition={{
-          duration: 0.75,
-          delay: 0.5,
-        }}
-      >
-        {children}
-      </motion.div>
+      {isHero ? (
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: -75 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate={mainControl}
+          transition={{
+            duration: 0.75,
+            delay: 0.5,
+          }}
+        >
+          {children}
+        </motion.div>
+      ) : (
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControl}
+          transition={{
+            duration: 0.75,
+            delay: 0.5,
+          }}
+        >
+          {children}
+        </motion.div>
+      )}
       {!isHero && (
         <motion.div
           variants={{
