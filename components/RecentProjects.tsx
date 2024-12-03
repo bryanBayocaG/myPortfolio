@@ -6,6 +6,7 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import { Reveal } from "./ui/Reveal";
 import Image from "next/image";
+import Link from "next/link";
 
 const RecentProjects = () => {
   return (
@@ -88,9 +89,11 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-blue-700">
-                    Check Live Site
-                  </p>
+                  <Link
+                    href={`/my_projects/${item.id}`}
+                    className="flex lg:text-xl md:text-xs text-sm text-blue-700">
+                    See More
+                  </Link>
                   <FaLocationArrow className="ms-3" color="#1d4ed8" />
                 </div>
               </div>

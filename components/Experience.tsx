@@ -4,8 +4,13 @@ import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { Reveal } from "./ui/Reveal";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+
+
 
 const Experience = () => {
+  const router = useRouter()
   return (
     <section className="py-20 w-full">
       <Reveal>
@@ -28,6 +33,9 @@ const Experience = () => {
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
+            onClick={() =>
+              router.push(`/my_experience/${card.id}`)
+            }
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">

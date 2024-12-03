@@ -70,7 +70,7 @@ export const BackgroundBeamsWithCollision = ({
         <div
             ref={parentRef}
             className={cn(
-                "h-screen w-full overflow-hidden",
+                "h-full md:h-screen w-full overflow-hidden ",
                 className
             )}
         >

@@ -81,7 +81,7 @@ export const projects = [
     title: "Title bla blablablablba",
     des: "Deccription blah lbhlalshdf  skhdf;kas df ;lshdf ajsd;l  klkshdjf;ahsdf;k asdhf;lhas",
     img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
     link: "/ui.earth.com",
   },
   {
@@ -89,7 +89,7 @@ export const projects = [
     title: "Title bla blablablablba",
     des: "Deccription blah lbhlalshdf  skhdf;kas df ;lshdf ajsd;l  klkshdjf;ahsdf;k asdhf;lhas",
     img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "/ui.yoom.com",
   },
   {
@@ -97,7 +97,7 @@ export const projects = [
     title: "Title bla blablablablba",
     des: "Deccription blah lbhlalshdf  skhdf;kas df ;lshdf ajsd;l  klkshdjf;ahsdf;k asdhf;lhas.",
     img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     link: "/ui.aiimg.com",
   },
   {
@@ -105,7 +105,7 @@ export const projects = [
     title: "Title bla blablablablba",
     des: "Deccription blah lbhlalshdf  skhdf;kas df ;lshdf ajsd;l  klkshdjf;ahsdf;k asdhf;lhas",
     img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "/ui.apple.com",
   },
 ];
