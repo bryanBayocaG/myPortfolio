@@ -1,4 +1,5 @@
 import { Timeline } from "@/components/ui/TimeLine";
+import { workExperience } from "@/data";
 import Image from "next/image";
 import React from "react";
 
@@ -7,6 +8,8 @@ interface Props {
 }
 
 export function Content({ id }: Props) {
+    const thisExperience = workExperience.find((experience) => experience.id === id);
+
     const data = [
         {
             title: "2024",
