@@ -2,6 +2,10 @@ import { Timeline } from "@/components/ui/TimeLine";
 import Image from "next/image";
 import React from "react";
 
+interface Props {
+    id: number;
+}
+
 export function Content() {
     const data = [
         {

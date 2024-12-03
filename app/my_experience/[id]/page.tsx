@@ -9,10 +9,9 @@ const page = ({ params }: any) => {
     return (
         <AllPageWrapper>
             <>
-
                 <FloatingNav navItems={navItems} />
                 <div className="h-20 " />
-                <Content />
+                <Content id={params.id} />
             </>
         </AllPageWrapper>
     )
