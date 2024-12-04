@@ -28,6 +28,7 @@ function ImageKo() {
         duration: 1,
         delay: 0.75,
       }}
+      viewport={{ once: true }}
       className="flex-1 bg-black-200 rounded-l-full justify-items-end hidden md:flex"
     >
       <Image
