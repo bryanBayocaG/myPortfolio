@@ -133,7 +133,7 @@ export const BentoGridItem = ({
 
             {id === 1 ? (
               <div className="flex flex-[1] justify-center  flex-col">
-                <Boxes />
+                {/* <Boxes /> */}
                 <div className="font-sans font-extralight lg:text-base text-sm text-[#C1C2D3] z-10">
                   {description}
                 </div>
