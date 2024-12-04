@@ -11,8 +11,10 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 
 import animationData from "@/data/confetti.json";
+import { Boxes } from "./BackgroundBoxes";
 
 import MagicButton from "./MagicButton";
+import { AnimatedTooltipPreview } from "../TechStackIcon";
 
 export const BentoGrid = ({
   className,
@@ -131,6 +133,7 @@ export const BentoGridItem = ({
 
             {id === 1 ? (
               <div className="flex flex-[1] justify-center  flex-col">
+                <Boxes />
                 <div className="font-sans font-extralight lg:text-base text-sm text-[#C1C2D3] z-10">
                   {description}
                 </div>
@@ -159,25 +162,29 @@ export const BentoGridItem = ({
               </>
             )}
             {id === 1 && (
-              <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 flex-[2] my-auto w-full h-fit items-center justify-items-center">
-                {
-                  [...Array(6)].map((id, _i) => (
-                    <div
-                      key={id}
-                      className="rounded-lg h-fit w-fit md:p-5 lg:p-3 p-2"
-                    >
-                      <Image
-                        src="/laravel-2.svg"
-                        width={0}
-                        height={0}
-                        alt="bgimg"
-                        loading="lazy"
-                        className="w-full h-full"
-                      />
-                    </div>
-                  ))
-                }
+              // <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 flex-[2] my-auto w-full h-fit items-center justify-items-center">
+              //   {
+              //     [...Array(6)].map((id, _i) => (
+              //       <div
+              //         key={id}
+              //         className="rounded-lg h-fit w-fit md:p-5 lg:p-3 p-2"
+              //       >
+              //         <Image
+              //           src="/laravel-2.svg"
+              //           width={0}
+              //           height={0}
+              //           alt="bgimg"
+              //           loading="lazy"
+              //           className="w-full h-full"
+              //         />
+              //       </div>
+              //     ))
+              //   }
+              // </div>
+              <div className="flex-[2] my-auto w-full h-full items-center justify-self-center">
+                <AnimatedTooltipPreview />
               </div>
+
             )}
             {id === 2 && (
               <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
