@@ -23,7 +23,7 @@ export const StickyScroll = ({
         container: ref,
         offset: ["start start", "end start"],
     });
-    const cardLength = content.length;
+    const cardLength = content.length + 1;
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         const cardsBreakpoints = content.map((_, index) => index / cardLength);
@@ -58,19 +58,19 @@ export const StickyScroll = ({
     useEffect(() => {
         setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
     }, [activeCard]);
-
+    console.log("heyCL", scrollYProgress)
     return (
         <motion.div
             // animate={{
             //     backgroundColor: backgroundColors[activeCard % backgroundColors.length],
             // }}
-            className="h-[30rem] overflow-y-auto flex justify-center relative rounded-md p-1 "
+            className="h-[50rem] w-full overflow-y-auto flex justify-center relative rounded-md p-1 "
             ref={ref}
         >
-            <div className="div relative flex-[1] items-start px-4">
+            <div className="div relative  flex-[1] items-start px-4">
                 <div className="w-full">
                     {content.map((item, index) => (
-                        <div key={item.title + index} className="my-28   ">
+                        <div key={item.title + index} className="my-28">
                             <motion.h2
                                 initial={{
                                     opacity: 0,
@@ -95,17 +95,25 @@ export const StickyScroll = ({
                             </motion.p>
                         </div>
                     ))}
-                    <div className="h-40" />
+                    <div className="h-96 " />
                 </div>
             </div>
             <div
-                style={{ background: backgroundGradient }}
+                // style={{ background: backgroundGradient }}
+                // style={{
+                //     background: "rgb(4,7,29)",
+                //     backgroundColor:
+                //         "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                // }}
                 className={cn(
-                    "hidden flex-[1] md:block h-80 w-full rounded-md bg-white sticky top-20 overflow-hidden ",
+                    "hidden flex-[1] md:block h-80 rounded-xl  border border-white/[0.1] sticky top-20 overflow-hidden ",
                     contentClassName
                 )}
             >
+
                 {content[activeCard].content ?? null}
+
+
             </div>
         </motion.div>
     );

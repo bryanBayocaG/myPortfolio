@@ -10,15 +10,17 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWit
 const page = () => {
   return (
 
-    <AllPageWrapper>
-      <>
-        <FloatingNav navItems={navItems} />
-        <BackgroundBeamsWithCollision>
-          <div className="h-20 " />
-          <Content />
-        </BackgroundBeamsWithCollision>
-      </>
-    </AllPageWrapper>
+    <>
+      <AllPageWrapper>
+        <>
+          <FloatingNav navItems={navItems} />
+          <BackgroundBeamsWithCollision>
+            <div className="h-40 " />
+            <Content />
+          </BackgroundBeamsWithCollision>
+        </>
+      </AllPageWrapper>
+    </>
 
   );
 };
