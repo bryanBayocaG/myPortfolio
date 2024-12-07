@@ -58,7 +58,6 @@ export const StickyScroll = ({
     useEffect(() => {
         setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
     }, [activeCard]);
-    console.log("heyCL", scrollYProgress)
     return (
         <motion.div
             // animate={{

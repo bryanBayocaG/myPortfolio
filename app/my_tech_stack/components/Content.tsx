@@ -8,57 +8,12 @@ import Rating from '@mui/material/Rating';
 import { HoverEffect } from "@/components/ui/CardHoverEffect";
 
 
-
-
-// interface Props {
-//     emoji: string;
-
-// }
-
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconEmpty': {
         color: '#ffffff',
     }
 });
 
-// const cardVariants: Variants = {
-//     offscreen: {
-//         top: 0
-//     },
-//     onscreen: {
-//         top: 10,
-//         rotate: -20,
-//         transition: {
-//             type: "spring",
-//             bounce: 0.4,
-//             duration: 0.8
-//         }
-//     }
-// };
-
-// function Card({ emoji }: Props) {
-//     return (
-//         <motion.div
-//             className="card-container h-48 flex relative my-5 md:my-12 mx-5  bg-black border-slate-700 border rounded-xl"
-//             initial="offscreen"
-//             whileInView="onscreen"
-//         >
-//             <div className="absolute -top-2 md:-top-10 md:-left-2 ">
-//                 <motion.div
-//                     className="flex w-40 h-48 md:w-[200px] md:h-[230px] text-9xl items-center justify-center rounded-xl bg-white"
-
-//                     variants={cardVariants}
-//                 >
-//                     {emoji}
-//                 </motion.div>
-//             </div>
-//             <div className="flex-[1]"></div>
-//             <div className="relative flex-[2] justify-items-center my-auto">
-//                 <h1 className=" backdrop-blur-[18px]">Hello asdfasdf adsfasdf asdfasdf sdfaasdfasdf</h1>
-//             </div>
-//         </motion.div>
-//     );
-// }
 
 const content = [
     {
@@ -411,56 +366,75 @@ const content = [
 
 export const projects = [
     {
-        title: "Stripe",
-        description:
-            "A technology company that builds economic infrastructure for the internet.",
-        link: "https://stripe.com",
+        title: "Javascript",
+        iconImg: "/javascript.svg",
+        proficiency: 7,
+        frequencyOfUse: 9,
+        interestLevel: 10,
+
     },
     {
-        title: "Netflix",
-        description:
-            "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-        link: "https://netflix.com",
+        title: "PHP",
+        iconImg: "/php.svg",
+        proficiency: 6,
+        frequencyOfUse: 5,
+        interestLevel: 7,
+
     },
     {
-        title: "Google",
-        description:
-            "A multinational technology company that specializes in Internet-related services and products.",
-        link: "https://google.com",
+        title: "Typescript",
+        iconImg: "/ts.svg",
+        proficiency: 7,
+        frequencyOfUse: 8,
+        interestLevel: 10,
+
     },
     {
-        title: "Meta",
-        description:
-            "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-        link: "https://meta.com",
+        title: "Tailwind CSS",
+        iconImg: "/tail.svg",
+        proficiency: 9,
+        frequencyOfUse: 9,
+        interestLevel: 10,
+
     },
-    {
-        title: "Amazon",
-        description:
-            "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-        link: "https://amazon.com",
-    },
-    {
-        title: "Microsoft",
-        description:
-            "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-        link: "https://microsoft.com",
-    },
+    // {
+    //     title: "React",
+    //     iconImg: "",
+    //     proficiency: 9,
+    //     frequencyOfUse: 9,
+    //     interestLevel: 10,
+
+    // },
+    // {
+    //     title: "NextJS",
+    //     iconImg: "",
+    //     proficiency: 9,
+    //     frequencyOfUse: 9,
+    //     interestLevel: 10,
+
+    // },
+    // {
+    //     title: "Laravel",
+    //     iconImg: "",
+    //     proficiency: 9,
+    //     frequencyOfUse: 9,
+    //     interestLevel: 10,
+
+    // },
+    // {
+    //     title: "Mysql",
+    //     iconImg: "",
+    //     proficiency: 9,
+    //     frequencyOfUse: 9,
+    //     interestLevel: 10,
+
+    // },
 ];
 
 
 
 const Content = () => {
-    // const food = [
-    //     "🍅",
-    //     "🍊",
-    //     "🍋",
-    //     "🍐",
-    //     "🍏",
-    //     "🫐",
-    //     "🍆",
-    //     "🍇"
-    // ];
+
 
     return (
         <>
@@ -474,9 +448,9 @@ const Content = () => {
                         return <Card key={i} emoji={emoji} />
                     })
                 } */}
-                <div className="max-w-5xl mx-auto px-8">
-                    <HoverEffect items={projects} />
-                </div>
+
+                <HoverEffect items={projects} />
+
 
             </div>
         </>

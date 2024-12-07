@@ -5,6 +5,7 @@ import React from "react";
 import Content from "./components/Content";
 import { navItems } from "@/data";
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollision";
+import Header from "@/components/Header";
 
 
 const page = () => {
@@ -15,7 +16,7 @@ const page = () => {
         <>
           <FloatingNav navItems={navItems} />
           <BackgroundBeamsWithCollision>
-            <div className="h-40 " />
+            <Header />
             <Content />
           </BackgroundBeamsWithCollision>
         </>

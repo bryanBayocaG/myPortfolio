@@ -4,6 +4,7 @@ import { navItems } from "@/data";
 import React from "react";
 import Content from "./components/Content";
 import AllPageWrapper from "@/components/AllPageWrapper";
+import Header from "@/components/Header";
 
 
 function Page() {
@@ -13,8 +14,7 @@ function Page() {
     <AllPageWrapper>
       <>
         <FloatingNav navItems={navItems} />
-        <div className="h-28 " />
-
+        <Header />
         <div className="flex flex-col">
           {items.map((item, i) => (<Content key={i} text={item} index={i} />))}
         </div>

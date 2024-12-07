@@ -1,7 +1,15 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Rating from '@mui/material/Rating';
+import { styled } from "@mui/material";
+const StyledRating = styled(Rating)({
+    '& .MuiRating-iconEmpty': {
+        color: '#ffffff',
+    }
+});
 
 export const HoverEffect = ({
     items,
@@ -9,8 +17,11 @@ export const HoverEffect = ({
 }: {
     items: {
         title: string;
-        description: string;
-        link: string;
+        proficiency: number,
+        frequencyOfUse: number,
+        interestLevel: number,
+        iconImg: string,
+
     }[];
     className?: string;
 }) => {
@@ -24,9 +35,9 @@ export const HoverEffect = ({
             )}
         >
             {items.map((item, idx) => (
-                <Link
-                    href={item?.link}
-                    key={item?.link}
+                <div
+
+                    key={idx}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -48,64 +59,68 @@ export const HoverEffect = ({
                             />
                         )}
                     </AnimatePresence>
-                    <Card>
-                        <CardTitle>{item.title}</CardTitle>
-                        <CardDescription>{item.description}</CardDescription>
-                    </Card>
-                </Link>
+                    <div className="rounded-2xl h-full w-full overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20">
+                        <div className="relative z-50 p-4">
+                            <div className="flex  items-center space-x-1 mb-4">
+                                <div>
+                                    <Image src={item.iconImg} alt={item.iconImg} width={0} height={0} className="w-5 h-5" />
+                                </div>
+                                <h4 className={cn("text-zinc-100 font-bold tracking-wide", className)}>
+                                    {item.title}
+                                </h4>
+                            </div>
+                            <div >
+                                <div className="flex">
+                                    <div className="flex-[1]">
+                                        <h6>Profeciency</h6>
+                                    </div>
+                                    <div className="flex-[2] w-full relative items-center justify-center justify-items-center bg-red-700">
+                                        <StyledRating
+                                            name="read-only"
+                                            value={item.proficiency}
+                                            max={10}
+                                            size={"medium"}
+                                            readOnly
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex">
+                                    <div className="flex-[1]">
+                                        <h6>Frequency of Use</h6>
+                                    </div>
+                                    <div className="flex-[2]">
+                                        <StyledRating
+                                            name="read-only"
+                                            value={item.frequencyOfUse}
+                                            max={10}
+                                            size={"medium"}
+                                            readOnly
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex">
+                                    <div className="flex-[1]">
+                                        <h6>Interest Level</h6>
+                                    </div>
+                                    <div className="flex-[2]">
+                                        <StyledRating
+                                            name="read-only"
+                                            value={item.interestLevel}
+                                            max={10}
+                                            size={"medium"}
+                                            readOnly
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             ))}
         </div>
     );
 };
 
-export const Card = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
-    return (
-        <div
-            className={cn(
-                "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
-                className
-            )}
-        >
-            <div className="relative z-50">
-                <div className="p-4">{children}</div>
-            </div>
-        </div>
-    );
-};
-export const CardTitle = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
-    return (
-        <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
-            {children}
-        </h4>
-    );
-};
-export const CardDescription = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
-    return (
-        <p
-            className={cn(
-                "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
-                className
-            )}
-        >
-            {children}
-        </p>
-    );
-};
+
+
+
