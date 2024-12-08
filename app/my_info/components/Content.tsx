@@ -6,13 +6,13 @@ interface Props {
   items: {
     img: string,
     title: string,
-    description: string,
+    subContent: {
+      subTitle: string,
+      subDescription: string,
+    }[],
   }[];
-
 }
-
 function Content({ items }: Props) {
-
   return (
     <div className="flex flex-col">
       {items.map((item, index) => (
@@ -50,12 +50,18 @@ function Content({ items }: Props) {
               {item.title}
             </h5>
           </div>
-          <div>
-            <h1>desc</h1>
+          <div className="w-full  p-2 mx-auto">
+            {item.subContent.map((subItem, subIndex) => (
+              <div key={subIndex} className="p-2">
+                <div className="justify-items-center">
+                  <h6 className="text-lg  font-semibold">{subItem.subTitle}</h6>
+                </div>
+                <p className="text-sm text-gray-200">{subItem.subDescription}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       ))}
-
     </div>
   );
 }

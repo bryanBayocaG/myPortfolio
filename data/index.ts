@@ -30,7 +30,7 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Things include about my preference, hobbies and background.",
+    title: "All about my preference, hobbies and background.",
     description: "My personal Info",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "w-full h-full",

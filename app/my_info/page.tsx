@@ -10,26 +10,53 @@ const items = [
   {
     img: "/grad.svg",
     title: "Education",
-    description: "Item 1 blab blab blab bla",
+    subContent: [
+      {
+        subTitle: "Tertiary Education",
+        subDescription: "blahl lbablafsdf"
+      },
+      {
+        subTitle: "Secondary Education",
+        subDescription: "blahl lbablafsdf"
+      }
+    ],
   },
   {
     img: "/tools.svg",
     title: "Skills",
-    description: "Item 1 blab blab blab bla",
+    subContent: [
+      {
+        subTitle: "Logo Making",
+        subDescription: "blahl lbablafsdf"
+      },
+      {
+        subTitle: "Photo Editing",
+        subDescription: "blahl lbablafsdf"
+      },
+    ],
   },
   {
     img: "/valorant.svg",
     title: "Hobbies",
-    description: "Item 1 blab blab blab bla",
+    subContent: [
+      {
+        subTitle: "Coding",
+        subDescription: "blahl lbablafsdf"
+      },
+      {
+        subTitle: "Online Games",
+        subDescription: "blahl lbablafsdf"
+      },
+      {
+        subTitle: "Anime",
+        subDescription: "blahl lbablafsdf"
+      },
+    ],
   },
-
 ];
 
-
 function Page() {
-
   return (
-
     <AllPageWrapper>
       <>
         <FloatingNav navItems={navItems} />
@@ -37,8 +64,6 @@ function Page() {
         <Content items={items} />
       </>
     </AllPageWrapper>
-
   );
 }
-
 export default Page;
