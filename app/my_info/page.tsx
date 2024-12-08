@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 
 const items = [
   {
-    img: "/valorant.svg",
+    img: "/grad.svg",
     title: "Education",
     description: "Item 1 blab blab blab bla",
   },
