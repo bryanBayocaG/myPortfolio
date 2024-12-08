@@ -13,7 +13,11 @@ const items = [
     subContent: [
       {
         subTitle: "Tertiary Education",
-        subDescription: "blahl lbablafsdf"
+        subDescription: (
+          <div>
+            <h1>heyo</h1>
+          </div>
+        )
       },
       {
         subTitle: "Secondary Education",
