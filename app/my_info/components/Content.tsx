@@ -54,7 +54,7 @@ function Content({ items }: Props) {
             {item.subContent.map((subItem, subIndex) => (
               <div key={subIndex} className="p-2">
                 <div className="justify-items-center">
-                  <h6 className="text-lg  font-semibold">{subItem.subTitle}</h6>
+                  <h6 className="text-2xl text-blue-700 font-semibold">{subItem.subTitle}</h6>
                 </div>
                 {/* <p className="text-sm text-gray-200">{subItem.subDescription}</p> */}
                 {

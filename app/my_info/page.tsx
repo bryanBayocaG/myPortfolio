@@ -14,14 +14,22 @@ const items = [
       {
         subTitle: "Tertiary Education",
         subDescription: (
-          <div>
-            <h1>heyo</h1>
+          <div className="relative justify-items-center space-y-4 p-2">
+            <p className="text-gray-300"><span className="font-bold text-teal-50">The Lewis College</span> - Bachelor of Science in Information Technology</p>
+            <p className="text-gray-300"><span className="font-bold text-teal-50">Awards:</span>  Distinction Award, Departmental Logo contest 3rd placer</p>
+            <p className="text-gray-300"><span className="font-bold text-teal-50">School Year:</span> 2020 – 2024</p>
           </div>
         )
       },
       {
         subTitle: "Secondary Education",
-        subDescription: "blahl lbablafsdf"
+        subDescription: (
+          <div className="relative justify-items-center space-y-4 p-2">
+            <p className="text-gray-300"><span className="font-bold text-teal-50">The Lewis College</span> - TVL Programming</p>
+            <p className="text-gray-300"><span className="font-bold text-teal-50">Awards:</span>  With Honor</p>
+            <p className="text-gray-300"><span className="font-bold text-teal-50">School Year:</span> 2016 – 2018</p>
+          </div>
+        )
       }
     ],
   },
