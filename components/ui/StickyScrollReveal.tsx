@@ -105,7 +105,7 @@ export const StickyScroll = ({
                 //         "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
                 // }}
                 className={cn(
-                    "hidden flex-[1] md:block h-80 rounded-xl  border border-white/[0.1] sticky top-20 overflow-hidden ",
+                    "hidden flex-[1] md:block h-80 rounded-xl  sticky top-1 overflow-hidden ",
                     contentClassName
                 )}
             >

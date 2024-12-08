@@ -30,14 +30,14 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "This things interest me, usually I'm doing this things.",
-    description: "The hobbies I do",
+    title: "Things include about my preference, hobbies and background.",
+    description: "My personal Info",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "w-full h-full",
     titleClassName: "justify-center ",
     img: "/b1.png",
     spareImg: "",
-    link: "/my_interests",
+    link: "/my_info",
   },
   // {
   //   id: 4,

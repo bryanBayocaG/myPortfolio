@@ -6,18 +6,35 @@ import Content from "./components/Content";
 import AllPageWrapper from "@/components/AllPageWrapper";
 import Header from "@/components/Header";
 
+const items = [
+  {
+    img: "/valorant.svg",
+    title: "Education",
+    description: "Item 1 blab blab blab bla",
+  },
+  {
+    img: "/tools.svg",
+    title: "Skills",
+    description: "Item 1 blab blab blab bla",
+  },
+  {
+    img: "/valorant.svg",
+    title: "Hobbies",
+    description: "Item 1 blab blab blab bla",
+  },
+
+];
+
 
 function Page() {
-  const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
   return (
 
     <AllPageWrapper>
       <>
         <FloatingNav navItems={navItems} />
         <Header />
-        <div className="flex flex-col">
-          {items.map((item, i) => (<Content key={i} text={item} index={i} />))}
-        </div>
+        <Content items={items} />
       </>
     </AllPageWrapper>
 

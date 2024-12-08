@@ -23,11 +23,6 @@ const content = [
         content: (
             <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
                 <div
-                    style={{
-                        background: "rgb(18, 22, 42)",
-                        backgroundColor:
-                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                    }}
                     className="flex relative items-center justify-center -mt-16 lg:-mt-16">
                     <div className="">
                         <Image
@@ -35,7 +30,7 @@ const content = [
                             alt="img"
                             width={0}
                             height={0}
-                            className="w-5 h-5 lg:w-10 lg:h-10"
+                            className="w-10 h-10 lg:w-16 lg:h-16"
                         />
                     </div>
                     <div className="ml-1">
@@ -109,11 +104,6 @@ const content = [
         content: (
             <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
                 <div
-                    style={{
-                        background: "rgb(18, 22, 42)",
-                        backgroundColor:
-                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                    }}
                     className="flex relative items-center justify-center -mt-16 lg:-mt-16">
                     <div className="">
                         <Image
@@ -121,7 +111,7 @@ const content = [
                             alt="img"
                             width={0}
                             height={0}
-                            className="w-5 h-5 lg:w-10 lg:h-10"
+                            className="w-10 h-10 lg:w-16 lg:h-16"
                         />
                     </div>
                     <div className="ml-1">
@@ -195,11 +185,6 @@ const content = [
         content: (
             <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
                 <div
-                    style={{
-                        background: "rgb(18, 22, 42)",
-                        backgroundColor:
-                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                    }}
                     className="flex relative items-center justify-center -mt-16 lg:-mt-16">
                     <div className="">
                         <Image
@@ -207,7 +192,7 @@ const content = [
                             alt="img"
                             width={0}
                             height={0}
-                            className="w-5 h-5 lg:w-10 lg:h-10"
+                            className="w-10 h-10 lg:w-16 lg:h-16"
                         />
                     </div>
                     <div className="ml-1">
@@ -281,11 +266,6 @@ const content = [
         content: (
             <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
                 <div
-                    style={{
-                        background: "rgb(18, 22, 42)",
-                        backgroundColor:
-                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-                    }}
                     className="flex relative items-center justify-center -mt-16 lg:-mt-16">
                     <div className="">
                         <Image
@@ -293,7 +273,7 @@ const content = [
                             alt="img"
                             width={0}
                             height={0}
-                            className="w-5 h-5 lg:w-10 lg:h-10"
+                            className="w-10 h-10 lg:w-16 lg:h-16"
                         />
                     </div>
                     <div className="ml-1">
@@ -332,6 +312,331 @@ const content = [
                         <StyledRating
                             name="read-only"
                             value={9}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center ">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Interest Level</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={10}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: "ReactJS",
+        description:
+            "I love using Tailwind CSS because its built-in responsive utilities make creating mobile-friendly web applications incredibly easy, also because of it's shorter, intuitive syntax, writing CSS is more faster equip with VS code extension for auto completing the code.",
+        content: (
+            <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
+                <div
+                    className="flex relative items-center justify-center -mt-16 lg:-mt-16">
+                    <div className="">
+                        <Image
+                            src="/re.svg"
+                            alt="img"
+                            width={0}
+                            height={0}
+                            className="w-10 h-10 lg:w-16 lg:h-16"
+                        />
+                    </div>
+                    <div className="ml-1">
+                        <h1>ReactJS</h1>
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full  w-full space-x-4 items-center -mt-6 lg:-mt-0 mb-4 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h6 className="font-bold text-sm lg:text-lg">Proficiency</h6>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center lg:flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={8}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center -mt-4 lg:-mt-0 mb-2 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Frequency of Use</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={9}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center ">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Interest Level</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={10}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: "NextJS",
+        description:
+            "I love using Tailwind CSS because its built-in responsive utilities make creating mobile-friendly web applications incredibly easy, also because of it's shorter, intuitive syntax, writing CSS is more faster equip with VS code extension for auto completing the code.",
+        content: (
+            <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
+                <div
+                    className="flex relative items-center justify-center -mt-16 lg:-mt-16">
+                    <div className="">
+                        <Image
+                            src="/next.svg"
+                            alt="img"
+                            width={0}
+                            height={0}
+                            className="w-10 h-10 lg:w-16 lg:h-16"
+                        />
+                    </div>
+                    <div className="ml-1">
+                        <h1>NextJS</h1>
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full  w-full space-x-4 items-center -mt-6 lg:-mt-0 mb-4 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h6 className="font-bold text-sm lg:text-lg">Proficiency</h6>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center lg:flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={8}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center -mt-4 lg:-mt-0 mb-2 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Frequency of Use</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={9}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center ">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Interest Level</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={10}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: "Laravel",
+        description:
+            "I love using Tailwind CSS because its built-in responsive utilities make creating mobile-friendly web applications incredibly easy, also because of it's shorter, intuitive syntax, writing CSS is more faster equip with VS code extension for auto completing the code.",
+        content: (
+            <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
+                <div
+                    className="flex relative items-center justify-center -mt-16 lg:-mt-16">
+                    <div className="">
+                        <Image
+                            src="/laravel-2.svg"
+                            alt="img"
+                            width={0}
+                            height={0}
+                            className="w-10 h-10 lg:w-16 lg:h-16"
+                        />
+                    </div>
+                    <div className="ml-1">
+                        <h1>Laravel</h1>
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full  w-full space-x-4 items-center -mt-6 lg:-mt-0 mb-4 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h6 className="font-bold text-sm lg:text-lg">Proficiency</h6>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center lg:flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={7}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center -mt-4 lg:-mt-0 mb-2 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Frequency of Use</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={7}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center ">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Interest Level</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={8}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: "MySQL",
+        description:
+            "I love using Tailwind CSS because its built-in responsive utilities make creating mobile-friendly web applications incredibly easy, also because of it's shorter, intuitive syntax, writing CSS is more faster equip with VS code extension for auto completing the code.",
+        content: (
+            <div className="grid grid-rows-3 h-full w-full my-2 items-center justify-center p-5">
+                <div
+
+                    className="flex relative items-center justify-center -mt-16 lg:-mt-16">
+                    <div className="">
+                        <Image
+                            src="/mysql.svg"
+                            alt="img"
+                            width={0}
+                            height={0}
+                            className="w-10 h-10 lg:w-16 lg:h-16"
+                        />
+                    </div>
+                    <div className="ml-1">
+                        <h1>MySQL</h1>
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full  w-full space-x-4 items-center -mt-6 lg:-mt-0 mb-4 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h6 className="font-bold text-sm lg:text-lg">Proficiency</h6>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center lg:flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={7}
+                            max={10}
+                            size={"large"}
+                            readOnly
+                        />
+                    </div>
+                </div>
+                <div className="grid grid-row-2 lg:flex h-full space-x-4 items-center -mt-4 lg:-mt-0 mb-2 lg:mb-0">
+                    <div className="w-full flex lg:justify-start justify-center lg:flex-[1]">
+                        <h1 className="font-bold text-sm lg:text-lg">Frequency of Use</h1>
+                    </div>
+                    <div style={{
+                        background: "rgb(18, 22, 42)",
+                        backgroundColor:
+                            "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                    }}
+                        className=" flex justify-center items-center flex-[2] h-fit rounded-full p-2 text-white">
+                        <StyledRating
+                            name="read-only"
+                            value={7}
                             max={10}
                             size={"large"}
                             readOnly

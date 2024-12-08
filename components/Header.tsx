@@ -15,8 +15,8 @@ const Header = () => {
     if (pathname === "/my_tech_stack") {
         words = ["My tech stack", "What I use", "What I love"];
     }
-    if (pathname === "/my_interests") {
-        words = ["My interests", "What's my hobby", "What I love"];
+    if (pathname === "/my_info") {
+        words = ["My personal information", "What's my hobby", "What's my background"];
     }
 
     if (pathname === "/my_tools") {
