@@ -70,11 +70,11 @@ export const HoverEffect = ({
                                 </h4>
                             </div>
                             <div >
-                                <div className="flex">
-                                    <div className="flex-[1]">
+                                <div className="flex gap-5">
+                                    <div className="flex-[1] text-sm">
                                         <h6>Profeciency</h6>
                                     </div>
-                                    <div className="flex-[2] w-full relative items-center justify-center justify-items-center bg-red-700">
+                                    <div className="flex-[2] w-full relative items-center justify-items-center">
                                         <StyledRating
                                             name="read-only"
                                             value={item.proficiency}
@@ -84,8 +84,8 @@ export const HoverEffect = ({
                                         />
                                     </div>
                                 </div>
-                                <div className="flex">
-                                    <div className="flex-[1]">
+                                <div className="flex gap-5">
+                                    <div className="flex-[1] text-sm">
                                         <h6>Frequency of Use</h6>
                                     </div>
                                     <div className="flex-[2]">
@@ -98,8 +98,8 @@ export const HoverEffect = ({
                                         />
                                     </div>
                                 </div>
-                                <div className="flex">
-                                    <div className="flex-[1]">
+                                <div className="flex gap-5">
+                                    <div className="flex-[1] text-sm">
                                         <h6>Interest Level</h6>
                                     </div>
                                     <div className="flex-[2]">

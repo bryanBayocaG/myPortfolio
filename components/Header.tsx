@@ -35,14 +35,14 @@ const Header = () => {
                 <h1>/</h1>
                 <Link
                     href={"#"}
-                    className='font-bold text-xl capitalize text-violet-600 '
+                    className='font-bold text-xl capitalize text-blue-700 '
                 >
                     {formattedPathname}
                 </Link>
 
             </div>
 
-            <div className="flex relative mt-10 items-center px-4 my-6 ">
+            <div className="flex relative mt-10 items-center px-4 my-6 overflow-hidden pt-5 pb-5">
                 <div className="-z-9 text-lg md:text-4xl font-normal text-neutral-600 dark:text-neutral-400">
                     See
                     <FlipWords words={words} duration={750} className="text-2xl md:text-6xl lg:text-7xl font-bold" /> <br />

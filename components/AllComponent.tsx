@@ -33,7 +33,7 @@ const AllComponent = () => {
       {scrollY > 300 && <RecentProjects />}
       {scrollY > 1000 && <Experience />}
       {/* <Clients /> */}
-
+      {/* <Experience /> */}
       {/* <Footer /> */}
     </div>
   );

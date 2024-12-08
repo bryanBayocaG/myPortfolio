@@ -397,38 +397,38 @@ export const projects = [
         interestLevel: 10,
 
     },
-    // {
-    //     title: "React",
-    //     iconImg: "",
-    //     proficiency: 9,
-    //     frequencyOfUse: 9,
-    //     interestLevel: 10,
+    {
+        title: "React",
+        iconImg: "re.svg",
+        proficiency: 8,
+        frequencyOfUse: 9,
+        interestLevel: 10,
 
-    // },
-    // {
-    //     title: "NextJS",
-    //     iconImg: "",
-    //     proficiency: 9,
-    //     frequencyOfUse: 9,
-    //     interestLevel: 10,
+    },
+    {
+        title: "NextJS",
+        iconImg: "next.svg",
+        proficiency: 8,
+        frequencyOfUse: 9,
+        interestLevel: 10,
 
-    // },
-    // {
-    //     title: "Laravel",
-    //     iconImg: "",
-    //     proficiency: 9,
-    //     frequencyOfUse: 9,
-    //     interestLevel: 10,
+    },
+    {
+        title: "Laravel",
+        iconImg: "laravel-2.svg",
+        proficiency: 7,
+        frequencyOfUse: 7,
+        interestLevel: 8,
 
-    // },
-    // {
-    //     title: "Mysql",
-    //     iconImg: "",
-    //     proficiency: 9,
-    //     frequencyOfUse: 9,
-    //     interestLevel: 10,
+    },
+    {
+        title: "Mysql",
+        iconImg: "mysql.svg",
+        proficiency: 7,
+        frequencyOfUse: 7,
+        interestLevel: 10,
 
-    // },
+    },
 ];
 
 
@@ -441,17 +441,8 @@ const Content = () => {
             <div className="hidden md:block">
                 <StickyScroll content={content} />
             </div>
-
             <div className="grid md:hidden ">
-                {/* {
-                    food.map((emoji, i) => {
-                        return <Card key={i} emoji={emoji} />
-                    })
-                } */}
-
                 <HoverEffect items={projects} />
-
-
             </div>
         </>
     )
