@@ -39,7 +39,11 @@ const items = [
     subContent: [
       {
         subTitle: "Logo Making",
-        subDescription: "blahl lbablafsdf"
+        subDescription: (
+          <div className="justify-items-center">
+            <p>I enjoy the challenge of creating something non-existent ideas into progressing designs. Each logo I create tells a story or embodies a unique essence. Seeing a concept come to life visually is incredibly rewarding for me.</p>
+          </div>
+        )
       },
       {
         subTitle: "Photo Editing",

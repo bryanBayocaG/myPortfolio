@@ -54,7 +54,7 @@ export const BentoGridItem = ({
 }) => {
 
 
-  const leftLists = ["Illustrator", "PhotoShop", "MicrosoftOffice"];
+  const leftLists = ["MicrosoftOffice", "PhotoShop", "Illustrator"];
   const rightLists = ["Visio", "Filmora", "NoSQL"];
 
   const [copied, setCopied] = useState(false);
